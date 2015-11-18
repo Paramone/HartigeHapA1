@@ -5,6 +5,12 @@
  */
 package hartige.DomainModel;
 
+import ViewModel.DrinkView;
+import ViewModel.MainView;
+import java.awt.Panel;
+import javax.swing.JFrame;
+
+
 /**
  *
  * @author Paramone
@@ -16,6 +22,13 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        JFrame Launch = new MainView();
+        Launch.setSize(800, 400);
+        Launch.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Launch.setTitle("De Hartige Hap");
+        Launch.setVisible(true);
+        
     }
     
 }
