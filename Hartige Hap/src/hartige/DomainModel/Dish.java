@@ -11,15 +11,11 @@ import java.text.DecimalFormat;
  *
  * @author Paramone
  */
-public class Drink {
+public class Dish {
     private String name, description, type;
     private DecimalFormat price;
     
-    
-    
-    
-    
-    
+        
     public DecimalFormat getPrice(){
         return price;
     }

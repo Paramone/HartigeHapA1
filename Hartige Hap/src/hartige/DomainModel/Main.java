@@ -9,7 +9,7 @@ package hartige.DomainModel;
  *
  * @author Paramone
  */
-public class HartigeHap {
+public class Main {
 
     /**
      * @param args the command line arguments
