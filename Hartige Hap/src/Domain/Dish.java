@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hartige.DomainModel;
+package Domain;
 
 import java.text.DecimalFormat;
 
@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
 public class Dish {
     private String name, description, type;
     private DecimalFormat price;
+    
     
         
     public DecimalFormat getPrice(){

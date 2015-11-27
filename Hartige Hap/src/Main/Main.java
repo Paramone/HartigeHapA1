@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hartige.DomainModel;
+package Main;
 
-import ViewModel.DrinkView;
-import ViewModel.MainView;
+import Presentation.DrinkView;
+import Presentation.MainView;
 import java.awt.Panel;
 import javax.swing.JFrame;
 

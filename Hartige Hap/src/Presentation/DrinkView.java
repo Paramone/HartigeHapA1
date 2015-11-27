@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ViewModel;
+package Presentation;
 
 /**
  *
  * @author Paramone
  */
-public class MainView extends javax.swing.JFrame {
+public class DrinkView extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainView
+     * Creates new form DrinkView
      */
-    public MainView() {
+    public DrinkView() {
         initComponents();
     }
 
@@ -27,19 +27,19 @@ public class MainView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        MainViewInfo = new javax.swing.JLabel();
-        OrderButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+        drinkMainInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        MainViewInfo.setText("Welkom bij de Hartige Hap!");
-
-        OrderButton.setText("Bestellen");
-        OrderButton.addActionListener(new java.awt.event.ActionListener() {
+        backButton.setText("Terug");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrderButtonActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
+
+        drinkMainInfo.setText("Hier kunt u drinken selecteren en toevoegen aan uw bestelling");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -48,31 +48,30 @@ public class MainView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(MainViewInfo))
+                        .addContainerGap()
+                        .addComponent(backButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(OrderButton)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                        .addGap(67, 67, 67)
+                        .addComponent(drinkMainInfo)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(MainViewInfo)
-                .addGap(18, 18, 18)
-                .addComponent(OrderButton)
-                .addContainerGap(234, Short.MAX_VALUE))
+                .addComponent(drinkMainInfo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addComponent(backButton)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void OrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderButtonActionPerformed
-        //Switch view to selection screen
-        this.setVisible(false);
-        new DrinkView().setVisible(true);
-    }//GEN-LAST:event_OrderButtonActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+
+        //Go back to Main View
+    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,26 +90,26 @@ public class MainView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DrinkView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DrinkView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DrinkView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DrinkView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainView().setVisible(true);
+                new DrinkView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel MainViewInfo;
-    private javax.swing.JButton OrderButton;
+    private javax.swing.JButton backButton;
+    private javax.swing.JLabel drinkMainInfo;
     // End of variables declaration//GEN-END:variables
 }
