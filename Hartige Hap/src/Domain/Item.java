@@ -11,4 +11,7 @@ package Domain;
  */
 public class Item {
     
+    private String name, status;
+    private double price;
+    
 }

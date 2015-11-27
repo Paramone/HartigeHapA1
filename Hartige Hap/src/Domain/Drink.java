@@ -5,34 +5,11 @@
  */
 package Domain;
 
-import java.text.DecimalFormat;
 
 /**
  *
  * @author Paramone
  */
-public class Drink {
-    private String name, description, type;
-    private DecimalFormat price;
-    
-    
-    
-    
-    
-    
-    public DecimalFormat getPrice(){
-        return price;
-    }
-    
-    public String getName(){
-        return name;
-    }
-    
-    public String getDescription(){
-        return description;
-    }
-    
-    public String getType(){
-        return type;
-    }
+public class Drink extends Item {
+    private double alcoholPercentage;
 }
