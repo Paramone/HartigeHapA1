@@ -5,10 +5,14 @@
  */
 package Domain;
 
+import java.util.Date;
+
 /**
  *
  * @author Jacob Walker
  */
 public class Order {
-    
+    private int orderNumber;
+    private String paymentStatus;
+    private Date orderDateTime;
 }

@@ -10,5 +10,6 @@ package Domain;
  * @author Jacob Walker
  */
 public class Table {
-    
+    private int tableNumber;
+    private int seats;
 }

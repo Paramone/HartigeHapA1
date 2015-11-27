@@ -10,5 +10,6 @@ package Domain;
  * @author Jacob Walker
  */
 public class Order_Item {
-    
+    private String orderStatus;
+    private int amount;
 }
