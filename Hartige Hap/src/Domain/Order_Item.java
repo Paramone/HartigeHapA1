@@ -12,4 +12,14 @@ package Domain;
 public class Order_Item {
     private String orderStatus;
     private int amount;
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public int getAmount() {
+        return amount;
+    }   
+    
+    
 }

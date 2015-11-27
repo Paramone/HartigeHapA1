@@ -8,4 +8,8 @@ import java.util.Date;
  */
 public class Dish extends Item{
     private Date preparation;
+
+    public Date getPreparation() {
+        return preparation;
+    }
 }

@@ -12,4 +12,14 @@ package Domain;
 public class Table {
     private int tableNumber;
     private int seats;
+
+    public int getTableNumber() {
+        return tableNumber;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+    
+    
 }

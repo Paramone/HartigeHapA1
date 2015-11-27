@@ -13,5 +13,19 @@ public class Item {
     
     private String name, status;
     private double price;
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+
+ 
 }

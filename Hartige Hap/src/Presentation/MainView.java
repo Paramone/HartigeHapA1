@@ -5,11 +5,15 @@
  */
 package Presentation;
 
+import Domain.Order;
+
 /**
  *
  * @author Paramone
  */
 public class MainView extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form MainView
@@ -71,7 +75,10 @@ public class MainView extends javax.swing.JFrame {
     private void OrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderButtonActionPerformed
         //Switch view to selection screen
         this.setVisible(false);
+        //startOrder("");
         new DrinkView().setVisible(true);
+        
+        
     }//GEN-LAST:event_OrderButtonActionPerformed
 
     /**

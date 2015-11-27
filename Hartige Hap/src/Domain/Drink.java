@@ -12,4 +12,9 @@ package Domain;
  */
 public class Drink extends Item {
     private double alcoholPercentage;
+
+    public double getAlcoholPercentage() {
+        return alcoholPercentage;
+    }
+
 }
