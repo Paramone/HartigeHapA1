@@ -72,10 +72,6 @@ public class DrinkView extends javax.swing.JFrame {
 
         //Go back to Main View
     }//GEN-LAST:event_backButtonActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

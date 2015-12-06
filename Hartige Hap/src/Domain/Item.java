@@ -11,8 +11,17 @@ package Domain;
  */
 public class Item {
     
-    private String name, status;
+    private String name, status, description;
     private double price;
+
+    public Item(String name, String status, String description, double price) {
+        this.name = name;
+        this.status = status;
+        this.description = description;
+        this.price = price;
+    }
+    
+
 
     public String getName() {
         return name;
@@ -20,6 +29,10 @@ public class Item {
 
     public String getStatus() {
         return status;
+    }
+    
+    public String getDescription(){
+        return description;
     }
 
     public double getPrice() {

@@ -3,7 +3,6 @@ package Main;
 import Presentation.MainView;
 import javax.swing.JFrame;
 
-
 /**
  *
  * @author Paramone
@@ -20,8 +19,7 @@ public class Main {
         Launch.setSize(800, 400);
         Launch.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Launch.setTitle("De Hartige Hap");
-        Launch.setVisible(true);
-        
+        Launch.setVisible(true);        
     }
     
 }

@@ -57,6 +57,7 @@ public class DatabaseConnection {
         {
             // A connection was already initalized.
             result = true;
+            System.out.println("connection successful10");
         }
         
         return result;

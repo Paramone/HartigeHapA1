@@ -10,8 +10,12 @@ package Domain;
  *
  * @author Paramone
  */
-public class Drink extends Item {
+public class Beverage extends Item {
     private double alcoholPercentage;
+
+    public Beverage(String name, String status, String description, double price) {
+        super(name, status, description, price);
+    }
 
     public double getAlcoholPercentage() {
         return alcoholPercentage;
