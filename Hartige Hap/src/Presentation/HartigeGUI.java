@@ -6,6 +6,7 @@
 package Presentation;
 
 import Business.HartigeManager;
+import DataStorage.DatabaseConnection;
 import Domain.Dish;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -87,14 +88,18 @@ public class HartigeGUI extends JFrame{
             public void actionPerformed(ActionEvent e)
             {
                 totalPane.setText(totalPane.getText() + manager.addToOrder(selectedDish));
-                totalPrice.setText(String.format("Prijs: €%s", manager.getOrderPrice()));
+                totalPrice.setText(String.format("Prijs: €%.2f", manager.getOrderPrice()));
             }
         });
         
         orderButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                //je besteld het
+                DatabaseConnection connection = new DatabaseConnection();
+                if (connection.openConnection() == false)
+                {
+                    totalPrice.setText("FALSE");
+                }
             }
         });
     }

@@ -1,6 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package DataStorage;
@@ -9,7 +8,7 @@ import java.sql.*;
 
 /**
  *
- * @author Paramone
+ * @author ppthgast
  */
 public class DatabaseConnection {
     
@@ -36,7 +35,8 @@ public class DatabaseConnection {
             try
             {   
                 // Try to create a connection with the library database
-                connection = DriverManager.getConnection("jdbc:mysql://145.48.6.147/ivp4a1", "root", "10ec4u");
+                connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost/poc" , "root", "root");
 
                 if(connection != null)
                 {
@@ -55,7 +55,6 @@ public class DatabaseConnection {
         {
             // A connection was already initalized.
             result = true;
-            System.out.println("connection successful10");
         }
         
         return result;
