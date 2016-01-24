@@ -36,7 +36,7 @@ public class DatabaseConnection {
             {   
                 // Try to create a connection with the library database
                 connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/poc" , "root", "root");
+                    "jdbc:mysql://localhost/poc" , "root", "");
 
                 if(connection != null)
                 {
@@ -117,6 +117,30 @@ public class DatabaseConnection {
         }
         
         return resultset;
+    }
+    
+    public boolean executeSQLUpdateStatement(String query)
+    {
+        boolean result = false;
+       
+        // First, check whether a some query was passed and the connection with
+        // the database.
+        if(query != null && connectionIsOpen())
+        {
+            // Then, if succeeded, execute the query.
+            try
+            {
+                statement.executeUpdate(query);
+                result = true;
+            }
+            catch(SQLException e)
+            {
+                System.out.println(e);
+                result = false;
+            }
+        }
+       
+        return result;
     }
     
     public boolean executeSQLDeleteStatement(String query)

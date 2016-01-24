@@ -95,11 +95,7 @@ public class HartigeGUI extends JFrame{
         orderButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                DatabaseConnection connection = new DatabaseConnection();
-                if (connection.openConnection() == false)
-                {
-                    totalPrice.setText("FALSE");
-                }
+                manager.saveOrder();
             }
         });
     }

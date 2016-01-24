@@ -29,6 +29,10 @@ public class Order {
         this.totalPrice = totalPrice;
     }
     
+    public ArrayList<Dish> getAllDishes() {
+        return order;
+    }
+    
     
     
     public void addToOrder(Dish newDish)
