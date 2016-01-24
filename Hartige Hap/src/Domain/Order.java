@@ -5,37 +5,34 @@
  */
 package Domain;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 /**
  *
- * @author Jacob Walker
+ * @author Walker
  */
 public class Order {
-    private int orderNumber;
-    private String paymentStatus;
-    private Date orderDateTime;
-
-    public Order(int orderNumber, String paymentStatus, Date orderDateTime) {
-        this.orderNumber = orderNumber;
-        this.paymentStatus = paymentStatus;
-        this.orderDateTime = orderDateTime;
-    }
-
+    private ArrayList<Dish> order;
+    private double totalPrice;
     
+    public Order()
+    {
+        order = new ArrayList<Dish>();
+        totalPrice = 0.0;
+    }
     
-    public int getOrderNumber() {
-        return orderNumber;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public String getPaymentStatus() {
-        return paymentStatus;
-    }
-
-    public Date getOrderDateTime() {
-        return orderDateTime;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
     
     
     
+    public void addToOrder(Dish newDish)
+    {
+        order.add(newDish);
+    }
 }
