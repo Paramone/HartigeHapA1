@@ -1,10 +1,7 @@
 package Main;
 
 import Business.HartigeManager;
-import Domain.Dish;
 import Presentation.HartigeGUI;
-import java.util.ArrayList;
-import javax.swing.JFrame;
 
 /**
  *

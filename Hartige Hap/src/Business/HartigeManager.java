@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Business;
 
 import DataStorage.DishDAO;
@@ -11,10 +6,6 @@ import Domain.Dish;
 import Domain.Order;
 import java.util.ArrayList;
 
-/**
- *
- * @author Walker
- */
 public class HartigeManager {
 
     private ArrayList<Dish> allDishes;
@@ -25,11 +16,11 @@ public class HartigeManager {
         DishDAO dishDAO = new DishDAO();
         allDishes = dishDAO.getDishes();
     }
-
+    
+    //Adding a dish to an order
     public String addToOrder(Dish newDish) {
         newOrder.addToOrder(newDish);
         newOrder.setTotalPrice(newOrder.getTotalPrice() + newDish.getPrice());
-
         return "Toegevoegd:\n" + newDish.getName() + "\n" + newDish.getDescription() + "\n\n";
     }
 
@@ -44,7 +35,8 @@ public class HartigeManager {
     public ArrayList<Dish> getAllDishes() {
         return allDishes;
     }
-
+    
+    //Used to get a Dish object by searching for its name
     public Dish getDishForName(String dishName) {
         for (Dish newDish : allDishes) {
             if (newDish.getName().equals(dishName)) {
@@ -62,6 +54,7 @@ public class HartigeManager {
         return allNames;
     }
 
+    //Save an order to the database.
     public void saveOrder() {
         OrderDAO orderDAO = new OrderDAO();
         orderDAO.saveOrder(newOrder);

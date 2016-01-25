@@ -31,13 +31,13 @@ public class OrderDAO {
                 sql += orderId + ",";
                 sql += orderDish.getId() + ");";
                 connection.executeSQLUpdateStatement(sql);
-                
+
                 // Add to the total order price
                 totalPrice += orderDish.getPrice();
             }
 
             // TODO generate total price of all dishes
-            sql = "INSERT INTO `order`(id, status, totalprice) VALUES ('" + orderId + "', 'placed', '"+ totalPrice + "')";
+            sql = "INSERT INTO `order`(id, status, totalprice) VALUES ('" + orderId + "', 'placed', '" + totalPrice + "')";
             connection.executeSQLUpdateStatement(sql);
 
             // We had a database connection opened. Since we're finished,

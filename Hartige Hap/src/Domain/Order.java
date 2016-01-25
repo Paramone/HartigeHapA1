@@ -12,15 +12,15 @@ import java.util.ArrayList;
  * @author Walker
  */
 public class Order {
+
     private ArrayList<Dish> order;
     private double totalPrice;
-    
-    public Order()
-    {
+
+    public Order() {
         order = new ArrayList<Dish>();
         totalPrice = 0.0;
     }
-    
+
     public double getTotalPrice() {
         return totalPrice;
     }
@@ -28,15 +28,12 @@ public class Order {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-    
+
     public ArrayList<Dish> getAllDishes() {
         return order;
     }
-    
-    
-    
-    public void addToOrder(Dish newDish)
-    {
+
+    public void addToOrder(Dish newDish) {
         order.add(newDish);
     }
 }

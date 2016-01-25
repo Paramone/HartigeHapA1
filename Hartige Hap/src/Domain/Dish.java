@@ -10,6 +10,7 @@ package Domain;
  * @author Walker
  */
 public class Dish {
+
     private int id;
     private String name;
     private String description;
@@ -22,13 +23,12 @@ public class Dish {
     public double getPrice() {
         return price;
     }
-    
+
     public int getId() {
         return id;
     }
-    
-    public Dish(int id, String name, String description, double price)
-    {
+
+    public Dish(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -38,10 +38,9 @@ public class Dish {
     public String getName() {
         return name;
     }
-    
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return name + ", (" + description + "), " + price;
     }
 }

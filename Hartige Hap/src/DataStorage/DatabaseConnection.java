@@ -1,15 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package DataStorage;
 
 import java.sql.*;
 
-/**
- *
- * @author ppthgast
- */
 public class DatabaseConnection {
     
     private Connection connection;
@@ -34,7 +26,7 @@ public class DatabaseConnection {
         {
             try
             {   
-                // Try to create a connection with the library database
+                // Try to create a connection with the poc database
                 connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost/poc" , "root", "");
 
